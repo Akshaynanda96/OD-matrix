@@ -14,6 +14,7 @@ if __name__ == "__main__":
     if filtered_data:
         spark = SparkConnection()
         stay_locations_df = identify_stay_locations_spark(filtered_data)
+        stay_locations_df.show(10)
         stay_locations_df.write.jdbc(url=jdbc_url, table=table_name, mode='append', properties=DB_PROPERTIES)
         logging.info("Data successfully inserted into stay_location_data.")
 

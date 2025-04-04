@@ -10,5 +10,6 @@ DB_PROPERTIES = {
 def SparkConnection():
     return SparkSession.builder \
         .appName("PostgresDataFilter") \
-        .config("spark.jars", "/home/lg/AkshayProjects/Python/PythonProject/geo_matxis/resources/postgresql-42.5.4.jar") \
+        .config("spark.jars", "/home/lg/PycharmProjects/geo_pluse/resources/postgresql-42.5.4.jar") \
         .getOrCreate()
+
